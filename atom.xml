@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>zyh&#39;s blog</title>
   
   
-  <link href="https://strangersinsist.github.io/project/atom.xml" rel="self"/>
+  <link href="https://strangersinsist.github.io/atom.xml" rel="self"/>
   
-  <link href="https://strangersinsist.github.io/project/"/>
+  <link href="https://strangersinsist.github.io/"/>
   <updated>2023-12-13T14:04:00.148Z</updated>
-  <id>https://strangersinsist.github.io/project/</id>
+  <id>https://strangersinsist.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>zyh</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://strangersinsist.github.io/project/2023/12/13/hello-world/"/>
-    <id>https://strangersinsist.github.io/project/2023/12/13/hello-world/</id>
+    <link href="https://strangersinsist.github.io/2023/12/13/hello-world/"/>
+    <id>https://strangersinsist.github.io/2023/12/13/hello-world/</id>
     <published>2023-12-13T14:04:00.148Z</published>
     <updated>2023-12-13T14:04:00.148Z</updated>
     
