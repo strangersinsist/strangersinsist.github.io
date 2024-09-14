@@ -6,7 +6,7 @@
   <link href="https://strangersinsist.github.io/atom.xml" rel="self"/>
   
   <link href="https://strangersinsist.github.io/"/>
-  <updated>2024-07-19T16:17:00.631Z</updated>
+  <updated>2024-09-14T15:42:38.795Z</updated>
   <id>https://strangersinsist.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Just Do It</title>
+    <link href="https://strangersinsist.github.io/2024/09/14/Just%20Do%20It/"/>
+    <id>https://strangersinsist.github.io/2024/09/14/Just%20Do%20It/</id>
+    <published>2024-09-14T15:35:33.133Z</published>
+    <updated>2024-09-14T15:42:38.795Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是我的21天打卡计划。</p><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p><a href="https://leetcode.cn/leetbook/detail/top-interview-questions-easy/">初级算法 - LeetBook - 力扣（LeetCode）</a></p><h6 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h6><ol><li>删除排序数组中的重复项</li></ol><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里是我的21天打卡计划。&lt;/p&gt;
+&lt;h3 id=&quot;算法&quot;&gt;&lt;a href=&quot;#算法&quot; class=&quot;headerlink&quot; title=&quot;算法&quot;&gt;&lt;/a&gt;算法&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/leetbook/detail/top-</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Unity2D小游戏</title>
@@ -39,8 +60,8 @@
   
   <entry>
     <title>基于Springboot+Vue的WebApp开发实验报告</title>
-    <link href="https://strangersinsist.github.io/2024/06/18/%E4%BA%9A%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://strangersinsist.github.io/2024/06/18/%E4%BA%9A%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
+    <link href="https://strangersinsist.github.io/2024/06/18/web%E5%BC%80%E5%8F%91/"/>
+    <id>https://strangersinsist.github.io/2024/06/18/web%E5%BC%80%E5%8F%91/</id>
     <published>2024-06-18T13:55:32.940Z</published>
     <updated>2024-07-26T16:33:52.523Z</updated>
     
