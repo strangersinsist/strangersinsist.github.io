@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>后端常用注解 - zyh&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="zyh&#039;s blog"><meta name="msapplication-TileImage" content="/img/logo.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="zyh&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="目前后端只会java"><meta property="og:type" content="blog"><meta property="og:title" content="后端常用注解"><meta property="og:url" content="https://strangersinsist.github.io/2024/10/28/%E5%90%8E%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/"><meta property="og:site_name" content="zyh&#039;s blog"><meta property="og:description" content="目前后端只会java"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://strangersinsist.github.io/img/og_image.png"><meta property="article:published_time" content="2024-10-28T14:38:07.968Z"><meta property="article:modified_time" content="2024-10-28T14:41:57.567Z"><meta property="article:author" content="zyh"><meta property="article:tag" content="web"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://strangersinsist.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://strangersinsist.github.io/2024/10/28/%E5%90%8E%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/"},"headline":"后端常用注解","image":["https://strangersinsist.github.io/img/og_image.png"],"datePublished":"2024-10-28T14:38:07.968Z","dateModified":"2024-10-28T14:41:57.567Z","author":{"@type":"Person","name":"zyh"},"publisher":{"@type":"Organization","name":"zyh's blog","logo":{"@type":"ImageObject","url":"https://strangersinsist.github.io/img/logo.svg"}},"description":"目前后端只会java"}</script><link rel="canonical" href="https://strangersinsist.github.io/2024/10/28/%E5%90%8E%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/"><link rel="icon" href="/img/logo.svg"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="zyh's blog" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="zyh&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/strangersinsist"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-28T14:38:07.968Z" title="2024/10/28 22:38:07">2024-10-28</time>发表</span><span class="level-item"><time dateTime="2024-10-28T14:41:57.567Z" title="2024/10/28 22:41:57">2024-10-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span><span class="level-item">7 分钟读完 (大约1057个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">后端常用注解</h1><div class="content"><p>目前后端只会java</p>
+<span id="more"></span>
+<h1 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h1><h3 id="核心注解"><a href="#核心注解" class="headerlink" title="核心注解"></a>核心注解</h3><ul>
+<li><code>@SpringBootApplication</code>: 用于标记主类，表示这是一个 Spring Boot 应用程序。这个注解组合了 <code>@Configuration</code>、<code>@EnableAutoConfiguration</code> 和 <code>@ComponentScan</code>。</li>
+</ul>
+<h3 id="依赖注入和控制反转"><a href="#依赖注入和控制反转" class="headerlink" title="依赖注入和控制反转"></a>依赖注入和控制反转</h3><ul>
+<li><code>@Component</code>: 表示一个类是 Spring 的组件，它是任何 Spring 管理组件的通用注解。</li>
+<li><code>@Service</code>: 用于服务层（业务逻辑层）的类。</li>
+<li><code>@Repository</code>: 用于数据访问层（DAO 层）的类。</li>
+<li><code>@Controller</code>: 用于标记控制器类，用于处理 HTTP 请求。</li>
+<li><code>@RestController</code>: 是 <code>@Controller</code> 和 <code>@ResponseBody</code> 的组合，用于创建 RESTful 控制器。</li>
+<li><code>@RequestMapping</code>: 用于映射 HTTP 请求到控制器的处理方法。</li>
+<li><code>@Autowired</code>: 用于自动装配 bean。</li>
+<li><code>@Qualifier</code>: 与 <code>@Autowired</code> 一起使用，用于指定需要注入的 bean 的名称。</li>
+<li><code>@Resource</code>: 另一种用于自动装配的方式，可以通过名称或类型进行注入。</li>
+</ul>
+<h3 id="配置类相关"><a href="#配置类相关" class="headerlink" title="配置类相关"></a>配置类相关</h3><ul>
+<li><code>@Configuration</code>: 表示一个类作为配置类，用于定义 bean。</li>
+<li><code>@Bean</code>: 在配置类中，用于标记方法，将方法的返回值定义为一个 bean。</li>
+<li><code>@EnableAutoConfiguration</code>: 告诉 Spring Boot 根据类路径设置、其他 bean 和各种属性设置自动配置应用。</li>
+</ul>
+<h3 id="条件注解"><a href="#条件注解" class="headerlink" title="条件注解"></a>条件注解</h3><ul>
+<li><code>@Conditional</code>: 表示只有在特定条件满足时才创建 bean。</li>
+<li><code>@Profile</code>: 用于指定某些 bean 只在特定的 Spring Profile 激活时才创建。</li>
+</ul>
+<h3 id="数据访问"><a href="#数据访问" class="headerlink" title="数据访问"></a>数据访问</h3><ul>
+<li><code>@Transactional</code>: 声明一个方法或类需要事务管理。</li>
+<li><code>@EnableTransactionManagement</code>: 启用注解驱动的事务管理。</li>
+</ul>
+<h3 id="Web-相关"><a href="#Web-相关" class="headerlink" title="Web 相关"></a>Web 相关</h3><ul>
+<li><code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PutMapping</code>, <code>@DeleteMapping</code>: 分别用于处理 HTTP GET, POST, PUT, DELETE 请求的快捷方式。（请求，提交，更新，删除）</li>
+<li><code>@PathVariable</code>: 用于将请求 URL 中的模板变量映射到功能处理方法的参数上。</li>
+<li><code>@RequestParam</code>: 用于将请求参数区数据映射到功能处理方法的参数上。</li>
+<li><code>@RequestBody</code>: 用于读取 Request 请求的 body 部分数据，使用系统默认配置的 HttpMessageConverter 进行解析，然后把相应的数据绑定到要返回的对象上。</li>
+<li><code>@ResponseBody</code>: 表示该方法的返回结果直接写入 HTTP 响应正文（ResponseBody）中。</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li><code>@EventListener</code>: 用于标记方法，这些方法会在 Spring 上下文中某些事件发生时被调用。</li>
+<li><code>@Scheduled</code>: 用于标记方法，这些方法会按照指定的计划执行。</li>
+</ul>
+<h1 id="Lombok-常用注解"><a href="#Lombok-常用注解" class="headerlink" title="Lombok 常用注解"></a>Lombok 常用注解</h1><p>Lombok 通过简单的注解来减少样板代码的编写，尤其是在实体类（Entity）中。</p>
+<ul>
+<li><code>@Data</code>: 自动生成 getter、setter、toString、equals 和 hashCode 方法。</li>
+<li><code>@NoArgsConstructor</code>: 自动生成无参构造函数。</li>
+<li><code>@AllArgsConstructor</code>: 自动生成全参构造函数。</li>
+<li><code>@RequiredArgsConstructor</code>: 自动生成包含必须属性（用 final 修饰的属性）的构造函数。</li>
+<li><code>@Getter</code>: 自动生成 getter 方法。</li>
+<li><code>@Setter</code>: 自动生成 setter 方法。</li>
+<li><code>@ToString</code>: 自动生成 toString 方法。</li>
+<li><code>@EqualsAndHashCode</code>: 自动生成 equals 和 hashCode 方法。</li>
+<li><code>@Slf4j</code>: 自动生成日志变量，通常是 log。</li>
+<li><code>@Log</code>: 自动生成日志变量，适用于各种日志框架。</li>
+<li><code>@Builder</code>: 自动生成构建器模式的支持。</li>
+<li><code>@Value</code>: 自动生成不可变类，即所有字段都是 final 的，并提供 getter 方法，但不提供 setter 方法。</li>
+<li><code>@SneakyThrows</code>: 自动处理受检异常（checked exceptions）。</li>
+</ul>
+<h1 id="MyBatis-Plus-常用注解"><a href="#MyBatis-Plus-常用注解" class="headerlink" title="MyBatis-Plus 常用注解"></a>MyBatis-Plus 常用注解</h1><p>MyBatis-Plus 是 MyBatis 的增强工具，用于简化 MyBatis 的操作。</p>
+<ul>
+<li><code>@TableName</code>: 指定实体类对应的数据库表名。</li>
+<li><code>@TableId</code>: 指定实体类中主键的字段。</li>
+<li><code>@TableField</code>: 指定实体类中非主键的字段，可以配置字段名与数据库列名之间的映射关系。</li>
+<li><code>@TableLogic</code>: 用于配置逻辑删除字段。</li>
+<li><code>@Version</code>: 用于配置乐观锁版本号字段。</li>
+<li><code>@Mapper</code>: 表示这是一个 MyBatis 的 Mapper 接口，MyBatis-Plus 会自动生成相应的实现类。</li>
+<li><code>@MapperScan</code>: 用于扫描 Mapper 接口所在的包，这样就不需要在每个 Mapper 接口上使用 <code>@Mapper</code> 注解。</li>
+<li><code>@SqlParser</code>: 用于指定 MyBatis-Plus 的 SQL 解析器。</li>
+<li><code>@KeySequence</code>: 用于指定主键序列（如果数据库支持序列作为主键）。</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>后端常用注解</p><p><a href="https://strangersinsist.github.io/2024/10/28/后端常用注解/">https://strangersinsist.github.io/2024/10/28/后端常用注解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>zyh</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-10-28</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-10-28</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/web/">web</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/10/28/oj%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/"><span class="level-item">Oj版本一开发过程</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "13d8ca5add81164662305edf4ca74a07",
+            repo: "strangersinsist.github.io",
+            owner: "strangersinsist",
+            clientID: "Ov23liz2NAeres1OYeL6",
+            clientSecret: "92a38f7da2d4d446fdb8f36fc11d246a6f4e18f6",
+            admin: ["strangersinsist"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="strangersinsist"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">strangersinsist</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Sun Yat-Sen University</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/strangersinsist" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/strangersinsist"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Gitee" href="https://gitee.com/strangersinsist"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Spring-Boot"><span class="level-left"><span class="level-item">1</span><span class="level-item">Spring Boot</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#核心注解"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">核心注解</span></span></a></li><li><a class="level is-mobile" href="#依赖注入和控制反转"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">依赖注入和控制反转</span></span></a></li><li><a class="level is-mobile" href="#配置类相关"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">配置类相关</span></span></a></li><li><a class="level is-mobile" href="#条件注解"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">条件注解</span></span></a></li><li><a class="level is-mobile" href="#数据访问"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">数据访问</span></span></a></li><li><a class="level is-mobile" href="#Web-相关"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">Web 相关</span></span></a></li><li><a class="level is-mobile" href="#其他"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">其他</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Lombok-常用注解"><span class="level-left"><span class="level-item">2</span><span class="level-item">Lombok 常用注解</span></span></a></li><li><a class="level is-mobile" href="#MyBatis-Plus-常用注解"><span class="level-left"><span class="level-item">3</span><span class="level-item">MyBatis-Plus 常用注解</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/CTF/"><span class="level-start"><span class="level-item">CTF</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/STL/"><span class="level-start"><span class="level-item">STL</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/web%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">web开发</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%89%93%E5%8D%A1/"><span class="level-start"><span class="level-item">打卡</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">游戏开发</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-28T14:38:07.968Z">2024-10-28</time></p><p class="title"><a href="/2024/10/28/%E5%90%8E%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">后端常用注解</a></p><p class="categories"><a href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-28T14:37:41.804Z">2024-10-28</time></p><p class="title"><a href="/2024/10/28/oj%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/">Oj版本一开发过程</a></p><p class="categories"><a href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-05T13:54:58.132Z">2024-10-05</time></p><p class="title"><a href="/2024/10/05/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/">html+css+js基础</a></p><p class="categories"><a href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-03T14:36:04.828Z">2024-10-03</time></p><p class="title"><a href="/2024/10/03/STL/">CPP-STL</a></p><p class="categories"><a href="/categories/STL/">STL</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2024/09/25/docker%E5%AD%A6%E4%B9%A0/"><img src="/gallery/dockerImage.png" alt="docker学习笔记"></a></figure><div class="media-content"><p class="date"><time dateTime="2024-09-24T16:49:41.491Z">2024-09-25</time></p><p class="title"><a href="/2024/09/25/docker%E5%AD%A6%E4%B9%A0/">docker学习笔记</a></p><p class="categories"><a href="/categories/%E6%89%93%E5%8D%A1/">打卡</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/10/"><span class="level-start"><span class="level-item">十月 2024</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/09/"><span class="level-start"><span class="level-item">九月 2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/07/"><span class="level-start"><span class="level-item">七月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/06/"><span class="level-start"><span class="level-item">六月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/05/"><span class="level-start"><span class="level-item">五月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/12/"><span class="level-start"><span class="level-item">十二月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c#</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cpp/"><span class="tag">cpp</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ctf/"><span class="tag">ctf</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql/"><span class="tag">mysql</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/springboot/"><span class="tag">springboot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unity/"><span class="tag">unity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/"><span class="tag">前端三件套</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="zyh&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 zyh</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2024 zyh</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
