@@ -6,7 +6,7 @@
   <link href="https://strangersinsist.github.io/atom.xml" rel="self"/>
   
   <link href="https://strangersinsist.github.io/"/>
-  <updated>2024-10-30T12:54:02.854Z</updated>
+  <updated>2024-11-13T01:03:51.058Z</updated>
   <id>https://strangersinsist.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>githubpages绑定域名</title>
+    <link href="https://strangersinsist.github.io/2024/11/13/githubpages_domain/"/>
+    <id>https://strangersinsist.github.io/2024/11/13/githubpages_domain/</id>
+    <published>2024-11-13T00:48:23.410Z</published>
+    <updated>2024-11-13T01:03:51.058Z</updated>
+    
+    <content type="html"><![CDATA[<p>githubpages绑定域名</p><span id="more"></span><p>参考教程<a href="https://blog.csdn.net/weixin_45961774/article/details/108402406">github.io绑定域名</a></p><ol><li>购买域名<br>个人是在 <a href="https://www.namesilo.com/">namesilo</a> 上购买域名</li><li>在 <code>hexo\source</code> 中创建 <code>CNAME</code> 文件，内容为不包含 <code>https://</code> 和 <code>www </code> 的域名，部署</li><li>github pages 的仓库 settings 填入 custom domain，勾选 enforce https</li><li>添加域名解析<br>在命令行 <code>ping username.github.io</code> 得到 IP 地址<br>在 namesilo 中创建以下域名解析记录<br>根域名通过 A 记录指向 GitHub Pages 的 IP 地址，而 <code>www</code> 子域名通过 CNAME 记录指向 GitHub Pages 的域名<br><img src="/source/11.13/namesilo.png" alt="Namesilo"></li></ol><p>A 记录</p><ul><li>HOSTNAME： 空白，表示这是根域名（如 <code>example.com</code>）。</li><li>TYPE：A 记录，用于将域名指向一个 IPv 4 地址。</li><li>ADDRESS &#x2F; VALUE： <code>185.199.110.153</code>，该域名解析到的 IP 地址。刚刚 <code>ping username.github.io</code> 得到的 IP 地址。</li><li>TTL（生存时间）： <code>7207</code>，记录在 DNS 缓存中存留的时间，默认值不用改。</li><li>SERVICE： “3 rd-party”，表示这是一个第三方提供的服务（如 GitHub Pages），通常用于托管静态网站。默认值不用改。</li></ul><p>CNAME 记录</p><ul><li>HOSTNAME： <code>www</code>，表示子域名 <code>www.example.com</code>。</li><li>TYPE： CNAME 记录，用于将一个域名指向另一个域名。</li><li>ADDRESS &#x2F; VALUE：<code>strangersinsist.github.io</code>，表示 <code>www.example.com</code> 将解析到 <code>strangersinsist.github.io</code> 这个域名上。</li></ul><ol start="5"><li>后续相应改动<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">clientID:</span> <span class="string">&#x27;your-client-id&#x27;</span></span><br><span class="line">  <span class="attr">clientSecret:</span> <span class="string">&#x27;your-client-secret&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#x27;your-repo&#x27;</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">&#x27;your-github-username&#x27;</span></span><br><span class="line">  <span class="attr">admin:</span> [<span class="string">&#x27;your-github-username&#x27;</span>]</span><br><span class="line">  <span class="attr">redirect_uri:</span> <span class="string">&#x27;你的新域名&#x27;</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;githubpages绑定域名&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="githubpages" scheme="https://strangersinsist.github.io/categories/githubpages/"/>
+    
+    
+    <category term="网站托管" scheme="https://strangersinsist.github.io/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/"/>
+    
+    <category term="域名管理" scheme="https://strangersinsist.github.io/tags/%E5%9F%9F%E5%90%8D%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>docker</title>
     <link href="https://strangersinsist.github.io/2024/10/28/docker/"/>
     <id>https://strangersinsist.github.io/2024/10/28/docker/</id>
     <published>2024-10-28T15:03:22.627Z</published>
-    <updated>2024-10-30T12:54:02.854Z</updated>
+    <updated>2024-11-13T00:57:34.849Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://learn.kodekloud.com/user/courses/docker-training-course-for-the-absolute-beginner">Docker Training Course for the Absolute Beginner Course | KodeKloud</a></p><span id="more"></span><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p><a href="https://kodekloud.com/pages/free-labs/docker/docker-basic-commands">Docker Basic Commands | KodeKloud</a><br>Delete all containers from the Docker Host.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">rm</span> -f $(docker ps -aq)</span><br></pre></td></tr></table></figure><p>Delete the ubuntu Image.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi ubuntu</span><br></pre></td></tr></table></figure><p>You are required to pull a docker image which will be used to run a container later. Pull the image <code>nginx:1.14-alpine</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx:1.14-alpine</span><br></pre></td></tr></table></figure><p>Run a container with the <code>nginx:1.14-alpine</code> image and name it <code>webapp</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name webapp nginx:1.14-alpine</span><br></pre></td></tr></table></figure><ul><li><code>docker run</code>: Command to create and start a new container.</li><li><code>-d</code>: Runs the container in detached mode (in the background).</li><li><code>--name webapp</code>: Assigns the name <code>webapp</code> to the container.</li><li><code>nginx:1.14-alpine</code>: Specifies the image and tag to use for the container.<br><strong>Cleanup:</strong> Delete all images on the host<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f $(docker images -aq)</span><br></pre></td></tr></table></figure>In Docker commands, <code>-aq</code> is a combination of options that can be used with certain Docker commands like <code>docker ps</code> and <code>docker images</code>. Here’s what each option means:</li><li><code>-a</code>: This stands for “all.” It lists all items, not just the default filtered view. For example:<ul><li>With <code>docker ps -a</code>, it lists all containers (both running and stopped).</li><li>With <code>docker images -a</code>, it lists all images, including intermediate images used in builds.</li></ul></li><li><code>-q</code>: This stands for “quiet” mode. It only outputs the IDs, rather than the full details.<ul><li>With <code>docker ps -q</code>, it lists only the container IDs.</li><li>With <code>docker images -q</code>, it lists only the image IDs.<br>When combined as <code>-aq</code>:</li></ul></li><li><code>docker ps -aq</code>: Lists only the IDs of all containers.</li><li><code>docker images -aq</code>: Lists only the IDs of all images.</li></ul><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1>]]></content>
     
@@ -30,6 +53,8 @@
     
     
     
+    <category term="docker" scheme="https://strangersinsist.github.io/categories/docker/"/>
+    
     
     <category term="docker" scheme="https://strangersinsist.github.io/tags/docker/"/>
     
@@ -37,8 +62,8 @@
   
   <entry>
     <title>后端常用注解</title>
-    <link href="https://strangersinsist.github.io/2024/10/28/%E5%90%8E%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/"/>
-    <id>https://strangersinsist.github.io/2024/10/28/%E5%90%8E%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/</id>
+    <link href="https://strangersinsist.github.io/2024/10/28/annotation/"/>
+    <id>https://strangersinsist.github.io/2024/10/28/annotation/</id>
     <published>2024-10-28T14:38:07.968Z</published>
     <updated>2024-10-28T14:53:59.775Z</updated>
     
@@ -58,8 +83,8 @@
   
   <entry>
     <title>Oj版本一开发过程</title>
-    <link href="https://strangersinsist.github.io/2024/10/28/oj%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/"/>
-    <id>https://strangersinsist.github.io/2024/10/28/oj%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</id>
+    <link href="https://strangersinsist.github.io/2024/10/28/matrix_oj/"/>
+    <id>https://strangersinsist.github.io/2024/10/28/matrix_oj/</id>
     <published>2024-10-28T14:37:41.804Z</published>
     <updated>2024-10-28T14:46:30.183Z</updated>
     
@@ -79,8 +104,8 @@
   
   <entry>
     <title>html+css+js基础</title>
-    <link href="https://strangersinsist.github.io/2024/10/05/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/"/>
-    <id>https://strangersinsist.github.io/2024/10/05/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/</id>
+    <link href="https://strangersinsist.github.io/2024/10/05/web_htmlcssjs/"/>
+    <id>https://strangersinsist.github.io/2024/10/05/web_htmlcssjs/</id>
     <published>2024-10-05T13:54:58.132Z</published>
     <updated>2024-11-10T09:11:22.176Z</updated>
     
@@ -102,8 +127,8 @@
   
   <entry>
     <title>CPP-STL</title>
-    <link href="https://strangersinsist.github.io/2024/10/03/STL/"/>
-    <id>https://strangersinsist.github.io/2024/10/03/STL/</id>
+    <link href="https://strangersinsist.github.io/2024/10/03/cpp_STL/"/>
+    <id>https://strangersinsist.github.io/2024/10/03/cpp_STL/</id>
     <published>2024-10-03T14:36:04.828Z</published>
     <updated>2024-10-03T14:38:06.908Z</updated>
     
@@ -123,8 +148,8 @@
   
   <entry>
     <title>docker学习笔记</title>
-    <link href="https://strangersinsist.github.io/2024/09/25/docker%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://strangersinsist.github.io/2024/09/25/docker%E5%AD%A6%E4%B9%A0/</id>
+    <link href="https://strangersinsist.github.io/2024/09/25/docker_learn/"/>
+    <id>https://strangersinsist.github.io/2024/09/25/docker_learn/</id>
     <published>2024-09-24T16:49:41.491Z</published>
     <updated>2024-11-10T09:22:18.670Z</updated>
     
@@ -142,8 +167,8 @@
   
   <entry>
     <title>算法</title>
-    <link href="https://strangersinsist.github.io/2024/09/14/%E6%89%93%E5%8D%A1%E8%B4%B4/"/>
-    <id>https://strangersinsist.github.io/2024/09/14/%E6%89%93%E5%8D%A1%E8%B4%B4/</id>
+    <link href="https://strangersinsist.github.io/2024/09/14/algorithm/"/>
+    <id>https://strangersinsist.github.io/2024/09/14/algorithm/</id>
     <published>2024-09-14T15:35:33.133Z</published>
     <updated>2024-11-10T09:13:44.733Z</updated>
     
@@ -188,8 +213,8 @@
   
   <entry>
     <title>基于Springboot+Vue的WebApp开发实验报告</title>
-    <link href="https://strangersinsist.github.io/2024/06/18/web%E5%BC%80%E5%8F%91/"/>
-    <id>https://strangersinsist.github.io/2024/06/18/web%E5%BC%80%E5%8F%91/</id>
+    <link href="https://strangersinsist.github.io/2024/06/18/health_management/"/>
+    <id>https://strangersinsist.github.io/2024/06/18/health_management/</id>
     <published>2024-06-18T13:55:32.940Z</published>
     <updated>2024-11-10T09:14:44.274Z</updated>
     
@@ -215,8 +240,8 @@
   
   <entry>
     <title>W4terCTF2024 writeup</title>
-    <link href="https://strangersinsist.github.io/2024/05/03/writeup/"/>
-    <id>https://strangersinsist.github.io/2024/05/03/writeup/</id>
+    <link href="https://strangersinsist.github.io/2024/05/03/w4terctf_writeup/"/>
+    <id>https://strangersinsist.github.io/2024/05/03/w4terctf_writeup/</id>
     <published>2024-05-03T06:39:16.405Z</published>
     <updated>2024-09-25T13:56:19.800Z</updated>
     
