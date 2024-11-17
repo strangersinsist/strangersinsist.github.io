@@ -1,3 +1,4 @@
+https://strangersinsist.github.io/2024/11/17/latex-markdown/
 https://strangersinsist.github.io/2024/11/13/githubpages_domain/
 https://strangersinsist.github.io/2024/10/28/docker/
 https://strangersinsist.github.io/2024/09/25/docker_learn/
@@ -25,6 +26,8 @@ https://strangersinsist.github.io/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A
 https://strangersinsist.github.io/tags/%E7%AE%97%E6%B3%95/
 https://strangersinsist.github.io/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/
 https://strangersinsist.github.io/tags/%E5%9F%9F%E5%90%8D%E7%AE%A1%E7%90%86/
+https://strangersinsist.github.io/tags/latex/
+https://strangersinsist.github.io/tags/markdown/
 https://strangersinsist.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/
 https://strangersinsist.github.io/categories/STL/
 https://strangersinsist.github.io/categories/web%E5%BC%80%E5%8F%91/
@@ -32,3 +35,4 @@ https://strangersinsist.github.io/categories/CTF/
 https://strangersinsist.github.io/categories/%E7%AE%97%E6%B3%95/
 https://strangersinsist.github.io/categories/docker/
 https://strangersinsist.github.io/categories/githubpages/
+https://strangersinsist.github.io/categories/latex/
